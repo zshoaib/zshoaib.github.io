@@ -271,7 +271,7 @@ text-align            : center;
 font-size             : 12px;
 }
 
-.url                  : hover{
+.url:hover {
 color                 : teal;
 }
 .xxlarge{
