@@ -207,6 +207,9 @@ font-size             : 12px!important;
 text-decoration       : none;
 color                 : white;
 }
+.social:hover {
+color                 : black;
+}
 
 .tealfont{
 color                 : #009688!important;
