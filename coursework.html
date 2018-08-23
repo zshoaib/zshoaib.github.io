@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<title>Zoya Shoaib</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
     
@@ -16,12 +16,19 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Playfair Display", sans-serif}
 </style>
 <body class="light-grey">
 
+   <!-- Header --> 
+   <div class="w3-bar nav">
+      <a href="index.html" class="w3-bar-item ">Home</a>
+      <a href="resume.html" class="w3-bar-item ">Resume</a>
+      <a href="coursework.html" class="w3-bar-item ">Projects</a>
+      </div>
+
 <!-- Computer Science Section -->
     <div class="content margin-top " style="max-width:1400px; ">
       <div class="container card white margin-bottom">
         <h2 
         class="text-grey padding-16 center">
-          <i class="fa fa-code fa-fw margin-right biggerfont tealfont"></i>Computer Science
+          <i class="fa fa-code fa-fw margin-right biggerfont tealfont"></i>Computer Science Projects
         </h2>
         <div class="container">
         <h5 class="opacity"><b>&nbsp; AutoComplete
@@ -66,7 +73,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Playfair Display", sans-serif}
                 <img class="assignmentimage" src="seam.png">
               </a>
                  <br>
-                  Seam Carving is an image resizing technique where the image is reduced in size by one pixel at a time. The algorithm finds a seam in the image with the lowest pixel energies so when the seam is removed, the image seems intact. I implemented the algorithm by fisrst calculating the pixel of each seam, found the vertical seam of minimum total energy, and then removed the seam. To resize the image horizontally, i transposed the picture.
+                  Seam Carving is an image resizing technique where the image is reduced in size by one pixel at a time. The algorithm finds a seam in the image with the lowest pixel energies so when the seam is removed, the image seems intact. I implemented the algorrithm by fisrst calculating the pixel of each seam, found the vertical seam of minimum total energy, and then removed the seam. To resize the image horizontally, i transposed the picture.
                  <br>
                  <br>
                </p>
@@ -90,19 +97,60 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Playfair Display", sans-serif}
               <hr>
             </div>
 
+            <div class="container">
+                <h5 class="opacity"><b>&nbsp; Heap Manager
+                    </b>
+                    </h5>
+                    <p> 
+                      <a href="http://www.cs.princeton.edu/courses/archive/spr18/cos217/asgts/06heapmgr/">
+                        <img class="assignmentimage" src="heapmgr.png">
+                      </a>
+                         <br>
+                          Heap Manager implements a heap using a doubly linked list and a hash table combined with a linked list to dynamically allocate memory.
+                           For the doubly linked list, the algorithm first searches the freelist for a big enough chunk. If the chunk of exact desired size is found,
+                           the algorithm removes it from the freelist and uses it. If the chunk is too big, the algorithm removes it, splits it, inserts the 
+                           tail end of it back in the free list and uses the front end. If no chunk is found, the heap size is increased and new chunk is created. 
+                           The above algorithm is repeated for the hashtable implementation where the size of the chunk is key and the doubly linked lists are the values.
+                           Through this implementation, the algortithm only search the appropriate size bins for big-enough chunk rather than the whole free list. For instance, if one
+                           needs a chunk of size 34 then the algorithm would search the linked lists of sizes 34 and above for a free chunk.
+                         <br>
+                         <br>
+                       </p>
+                      <hr>
+                    </div>
+
+                    <div class="container">
+                        <h5 class="opacity"><b>&nbsp; Unix Shell
+                            </b>
+                            </h5>
+                            <p> 
+                              <a href="http://www.cs.princeton.edu/courses/archive/spr18/cos217/asgts/07shell/">
+                                <img class="assignmentimage" src="unix.png">
+                              </a>
+                                 <br>
+                                 Unix Shell implements a minimal interactive/realistic Linux shell. The program first creates a lexical analyzer which accepts an 
+                                 array of characters and returns a Dynamic Array of words where '<' and '>' are special words. Then, a syntactic analyzer accepts the
+                                 array of words and creates a command. For instance, "cat < file1" returns "Command name: cat, Command stdin: file1". Finally, the main program
+                                 executes the command including cd, setenv, unsetenv, and exit.
+                                 <br>
+                                 <br>
+                               </p>
+                              <hr>
+                            </div>
+
       
 <!-- Image Sources -->
-  <a href="http://www.cs.princeton.edu/courses/archive/fall17/cos226/assignments.php" class="url">
-    <p> The images and text in the section above are edited from the 226 class page.</p>
+    <p style="text-align: center; font-size: 12px;"> The images and text in the section above are edited from the <a href="http://www.cs.princeton.edu/courses/archive/fall17/cos226/assignments.php" class="url">226</a> 
+      and <a href="http://www.cs.princeton.edu/courses/archive/spr18/cos217/index.html" class="url">217</a> class pages.</p>
       </a>
         <hr>
       
-<!-- Entrepreneurship Section -->
+<!-- Entrepreneurship Projects -->
     <div class="content margin-top " style="max-width:1400px; ">
       <div class="container card white margin-bottom">
         <h2 
         class="text-grey padding-16 center">
-          <i class="fa fa-lightbulb-o fa-fw margin-right biggerfont tealfont"></i>Entrepreneurship
+          <i class="fa fa-lightbulb-o fa-fw margin-right biggerfont tealfont"></i>Entrepreneurship Course Work
         </h2>
         <div class="container">
         <h5 class="opacity"><b>&nbsp; Creativity, Innovation, and Design
@@ -113,12 +161,36 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Playfair Display", sans-serif}
                 <img class="entimage" src="egr200.png"> 
               </a>
                  <br>
-                 In this class, my team and I worked on the wicked-problem as to how to reduce sexual misconduct on campus using the process of Design-Thinking. As a part of this process, we conducted various interviews with many students at Princeton to understand the problem before we attempted to solve it. Through the interviews, we gained valuable insights such as that people don't like being asked for consent but want to be asked for consent and the victims we interviewed didn't necessarily want to punish their offender but rather wanted them to get educated & apologize for their actions. Knowing our insights, we first tried to create a system where offender and victims can engage in a conversation which we learned, through prototyping, wasn't a great idea in case an offender retaliates. Then, we tried to create a system where students could annonymously refer offenders or potential offenders to get educated. However, we learned that wansn't completely legal. Finally, we presented a website that provides sample letters for victims on how to reach out to their offender and how to reach out for support. The project was frustrating and exhausting at times but also very rewarding. 
+                 In this class, my team and I worked on the wicked-problem as to how to reduce sexual misconduct on campus using the process of Design-Thinking. As a part of this process, we conducted various interviews with many students at Princeton to understand the problem before we attempted to solve it. Through the interviews, we gained valuable insights such as that people don't like being asked for conset but want to be asked for consent and the victims we interviewed didn't necessarily want to punish their offender but rather wanted them to get educated & apologize for their actions. Knowing our insights, we first tried to create a system where offender and victims can engage in a conversation which we learned, through prototyping, wasn't a great idea in case an offender retaliates. Then, we tried to create a system where students could annonymously refer offenders or potential offenders to get educated. However, we learned that wansn't completely legal. Finally, we presented a website that provides sample letters for victims on how to reach out to their offender and how to reach out for support. The project was frustrating and exhausting at times but also very rewarding. 
                  <br>
                  <br>
                </p>
               <hr>
             </div>
+            <div class="container">
+                <h5 class="opacity"><b>&nbsp; Tiger Challenge- United Partnership for Refugees in Sustainable Employment
+                    </b>
+                    </h5>
+                    <p> 
+                      <a href="https://tigerchallenge.princeton.edu/our-work/community-challenge/uprise">
+                        <img class="entimage" src="tc.png"> 
+                      </a>
+                         <br>
+                         During the summer after my freshman year, I worked with five other students on Tiger Challenge. 
+                          My team and I collaborated to see how can we help refugees find better and more stable jobs in the tri-state area using Design thinking, a human-centered innovation methodology.
+                          My team started by conducting various interviews to gain an understanding of the perspectives and needs of stakeholders involved in the challenge. 
+                          Through these interviews and research, we found that some of the main issues that affecting refugees in the employment sector are ESL, cultural differences, transportation, job readiness training, and child care. 
+                          For instance, there is an inherent conflict between finding a job and learning English. A refugee has imminent pressure to get an income but in order to get a job you need to know English. 
+                          Suppose that a refugee finds a job then they don’t have the means to travel to their job because they don’t have a driver license or a car.
+                          Moreover, in some cultures women haven’t worked before or are not allowed to work. If a refugee woman finds a job then who will take care of the children at the house.
+                          These are some of the many obstacles we learned about. In the next phase of the project, we ideated upon our research to create up to thousand solutions. We finally decided on creating an employer resource for hiring refugees which
+                          we are currently working on.
+                         <br>
+                         <br>
+                       </p>
+                      <hr>
+                    </div>
+
 
 
 <!-- Social Media Footer -->
